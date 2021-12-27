@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    width: 100%;
+    background-color: rgba(250, 250, 250);
+}
+
+section {
+    margin-top: 55px;
+}

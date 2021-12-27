@@ -1,0 +1,211 @@
+.SignScreen {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+
+
+.SignScreen .mobilScreen {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 20px 0px;
+    height: 750px;
+    width: 450px;
+    background-image: url("https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mobilScreen .mobilSlider {
+    height: 530px;
+    margin: 35px 22px 25px;
+    width: 300px;
+    position: absolute;
+}
+
+.mobilSlider img {
+    width: 100%;
+}
+
+.SignScreen .SignForm {
+    width: 400px;
+    height: 800px;
+    border: solid 0.1em gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.SignForm .brand  {
+    text-align: center;
+}
+
+.brand h4 {
+    font-weight: 700;
+    margin-top: 2rem;
+    color: rgba(0, 0, 0, 0.323);
+}
+
+.SignForm .LoginFacbook {
+    background-color:#0095f6;
+    padding: 8px 15px;
+    color: #fff;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.LoginFacbook span {
+    margin-left: 10px ;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+
+.SignForm form {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.SignForm form .notMatch {
+    padding: 8px ;
+    font-size: 1.1em;
+    text-align: center;
+    color: red;
+
+}
+
+
+.SignForm form input {
+    padding: 5px;
+    margin: 10px 0px 10px;
+    padding: 7px 9px;
+    width: 100%;
+    border: solid 0.01em rgba(0, 0, 0, 0.193);
+    border-radius: 5px;
+    outline: none;
+}
+
+.SignForm form .formPassowrd {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.SignForm .LoginRedirect {
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.LoginRedirect  a {
+    text-decoration: none;
+}
+
+.formPassowrd span {
+    position: absolute;
+    cursor: pointer;
+    right: 0px;
+    padding: 7px;
+    background: inherit;
+}
+
+.formPassowrd span i {
+    font-size: 1.6em;
+    color: red;   
+}
+
+.formPassowrd span .ok {
+    color: rgba(0, 0, 0, 0.323);
+}
+
+.SignForm form .SignBtn {
+    width: 100%;
+    border: none;
+    padding: 7px;
+    border-radius: 4px;
+    background: #0095f6;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.SignForm form .orSocial {
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgba(0, 0, 0, 0.672);
+}
+
+.orSocial .orScoialSolid {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.323);
+    width: 100px;
+}
+
+.SignForm form .RedirectFacook {
+    border: none;
+    background: #fff;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    color: #385185;
+}
+
+.SignForm form .passwordRepat {
+    text-align: center;
+}
+
+.SignForm form .newUser {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.61);
+}
+
+.SignForm .newUser {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newUser a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.SignForm .appDowloand {
+    width: 100%;
+}
+
+.appDowloand span {
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appDowloand .AppHref {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 7px 4px;
+}
+
+.appDowloand a img {
+    width: 180px;
+}

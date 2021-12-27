@@ -1,0 +1,28 @@
+.ProfileLink {
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: solid 1px #8e8e8e7c;
+}
+
+
+
+.ProfileLink a {
+    text-decoration: none;
+    color: #8e8e8e;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+   
+}
+
+.ProfileLink .is-active {
+    color: rgba(0, 0, 0, 0.871);
+    border-top: 0.01em solid rgb(0, 0, 0);
+}
+
+
+.ProfileLink .is-active svg {
+    color: #000;
+}
