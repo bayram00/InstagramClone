@@ -27,6 +27,14 @@ const Post = require('./Router/Post');
 app.use("/", Post)
 
 
+const loggedInUser = require('./Router/loggedInUser')
+
+app.use('/', loggedInUser)
+
+
+
+
+
 
 
 app.listen(process.env.PORT, () => console.log('server in running port ' + process.env.PORT))

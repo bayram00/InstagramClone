@@ -1,35 +1,49 @@
-import React, { useContext } from 'react'
-import { Route } from 'react-router'
+import React, { useContext, useState } from 'react'
+import { Route } from 'react-router-dom'
 
 //component
 import SignScrre from './SignScreen'
 import SignUp from './SignUp'
-import Home from './Home'
-import Profil from './Profile'
+import Home from './Home/Home'
+import UserProfile from './UserProfile/UserProfile'
+import CommentModal from './Comment/CommentModal'
+import LoggedProfile from './LoggedProfile/LoggedProfile'
 //provider
 import { DataProvider } from './CONTEXT'
 
-
-
 function Section() {
-    const { Cookie } = useContext(DataProvider)
+
+
+    const { Cookie, LoggedUser } = useContext(DataProvider)
+
 
 
     return (
+
         <section>
 
-
             {
-                Cookie ? <Route path="/" exact component={Home} /> : <Route path="/" exact component={SignScrre} /> //Home page we check progress
+                Cookie ? <Route path="/"  exact component={Home} /> : <Route path="/" exact component={SignScrre} /> //Home page we check progress
             }
 
+            <Route path="/accounts/login" component={SignScrre} />
+            
 
-            <Route path="/accounts/login" exact component={SignScrre} /> 
+            <Route path={`/${LoggedUser.userName}`}>
+                <LoggedProfile data={LoggedUser} />
+            </Route>
 
 
-            <Route path="/bayrambayraktar1" exact component={Profil} />
+            <Route path={`/P/:id`}  >
+                <CommentModal />
+            </Route>
 
-            <Route path="/accounts/signup">
+
+            <Route path={'/User/:profile'}  >
+                <UserProfile />
+            </Route>
+
+            <Route path="/accounts/signup" >
                 <SignUp />
             </Route>
 

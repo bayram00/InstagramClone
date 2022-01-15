@@ -49,6 +49,7 @@ const MaxAge = 60 * 60 * 1 //1 Hour
 //create
 Router.post("/login", async (req, res) => {
 
+
     const { EpostOrPhone, password } = req.body
 
     if (!EpostOrPhone || !password) {
@@ -96,6 +97,7 @@ Router.post("/login", async (req, res) => {
 //create
 Router.get('/logout', async (req, res) => {
     res.cookie('User_', '', { maxAge: 1 })
+    res.cookie('Usr', '', { maxAge: 1 })
     res.send({ cookie: "Invalid" })
 
 })

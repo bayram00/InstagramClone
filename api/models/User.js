@@ -19,25 +19,17 @@ const SignupSchma = new mongoose.Schema({
         type: String,
         required: true
     },
+    desc: {
+        type: String,
+    },
     profilePicture: {
         type: String,
-        default: ""
+        default: "http://localhost:5000/Static/NotProfile/44884218_345707102882519_2446069589734326272_n.jpg"
     },
     followers: [{ type: ObjectId, ref: "User" }],
     followings: [{ type: ObjectId, ref: "User" }],
-    desc: {
-        type: String,
-        max: 50
-    },
-    saved: {
-        type: Array,
-        default: []
-    }
-    ,
-    Post: [{
-        type: Object,
-        ref: "Post"
-    }]
+    saved: [{ type: ObjectId, ref: "Post" }],
+   
 
 }, { timestamps: true });
 

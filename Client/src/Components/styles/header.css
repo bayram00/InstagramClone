@@ -27,7 +27,7 @@ header .Brand img {
 
 
 header .Searchİnp {
-    width: 250px;
+    width: 30%;
     position: relative;
 }
 
@@ -78,13 +78,13 @@ header .Searchİnp {
 
 .Searchİnp i {
     position: absolute;
-    line-height: 40px;
+    line-height: 50px;
     margin: 0 105px 0px;
     color: rgb(209, 209, 209);
 }
 
-header .Searchİnp input {
-    padding: 5px 30px;
+header .Searchİnp .Serach {
+    padding: 10px 30px;
     margin: 0 100px 0px;
     width: 100%;
     border: solid 1px rgb(209, 209, 209);
@@ -92,12 +92,34 @@ header .Searchİnp input {
     outline: none;
 }
 
+@media screen and (max-width:1036px) {
+    .Serach {
+        margin: 0px 40px 0px !important;
+    }
+
+    .Searchİnp i {
+        position: absolute;
+        line-height: 50px;
+        margin: 0 45px 0px;
+        color: rgb(209, 209, 209);
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .Searchİnp {
+        display: none;
+    }
+}
+
+
 
 header .NavigationBar {
     display: flex;
     align-items: center;
     list-style: none;
 }
+
 
 
 .NavigationBar li {
@@ -155,7 +177,7 @@ header .NavigationBar {
 }
 
 .DropDown a svg {
- margin-right: 8px;
+    margin-right: 8px;
 }
 
 .DropDown a span {

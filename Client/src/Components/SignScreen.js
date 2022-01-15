@@ -2,20 +2,20 @@ import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 
-import axios from 'axios'
 import './styles/SignScrren.css'
 //Data Porvider
 import { DataProvider } from './CONTEXT'
 
 
+
+
 function SignScreen() {
 
 
-    const { img } = useContext(DataProvider)
+    const { img, LoginRequest , Err } = useContext(DataProvider)
 
     const [count, setCount] = useState(0)
     const [PassShow, setPassShow] = useState(true)
-    const [Err, setErr] = useState("");
 
 
     //input State value-------------------------
@@ -26,33 +26,10 @@ function SignScreen() {
     //handle Submit-----------------------------
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const LoginObj = {
-            EpostOrPhone: EpostOrPhone,
-            password: password
-        }
 
-        //axios post request
-
-        await axios.post('http://localhost:5000/accounts/login', LoginObj, { withCredentials: true }).then(response => {
-            try {
-                if (response.data.notMatch) {
-                    setErr(response.data.User._id)
-                } else {
-                    try {
-                        return window.location.href = "http://localhost:3000/"
-
-                    } catch (error) {
-                        console.log(error)
-                    }
-                }
-            } catch (error) {
-                console.log(error)
-            }
-        })
+        await LoginRequest(EpostOrPhone, password)
 
     }
-
-
 
     useEffect(() => {
         document.title = "Giriş Yap · İnstagram"
@@ -117,7 +94,7 @@ function SignScreen() {
                     </button>
 
                     <div className='notMatch'>
-                        <span>{Err.notMatch}</span>
+                        <span>{Err}</span>
                     </div>
 
                     <span className="passwordRepat">Şifreni mi unutun?</span>
